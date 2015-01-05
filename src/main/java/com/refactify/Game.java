@@ -11,10 +11,18 @@ public class Game {
     }
 
     private void adjustCurrentFrame(int pins) {
-        if ((firstThrowInFrame == true && pins == 10) || !firstThrowInFrame)
+        if (lastBallInFrame(pins))
             advanceFrame();
         else
             firstThrowInFrame = false;
+    }
+
+    private boolean lastBallInFrame(final int pins) {
+        return strike(pins) || !firstThrowInFrame;
+    }
+
+    private boolean strike(final int pins) {
+        return firstThrowInFrame == true && pins == 10;
     }
 
     private void advanceFrame() {
