@@ -54,4 +54,14 @@ public class TestGame {
         assertEquals(18, g.score());
         assertEquals(3, g.getCurrentFrame());
     }
+
+    @Test
+    public void testSimpleStrike() throws Exception {
+        g.add(10);
+        g.add(3);
+        g.add(6);
+        assertEquals(19, g.scoreForFrame(1));
+        assertEquals(28, g.score());
+        assertEquals(3, g.getCurrentFrame());
+    }
 }
