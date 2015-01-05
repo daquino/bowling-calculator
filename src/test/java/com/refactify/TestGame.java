@@ -118,4 +118,15 @@ public class TestGame {
         g.add(9);
         assertEquals(299, g.score());
     }
+
+    @Test
+    public void testTenthFrameSpare() throws Exception {
+        for(int i=0; i<9; i++) {
+            g.add(10);
+        }
+        g.add(9);
+        g.add(1);
+        g.add(1);
+        assertEquals(270, g.score());
+    }
 }
