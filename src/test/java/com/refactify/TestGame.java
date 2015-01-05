@@ -72,6 +72,18 @@ public class TestGame {
         }
         assertEquals(300, g.score());
         assertEquals(11, g.getCurrentFrame());
+    }
+
+    @Test
+    public void testEndOfArray() throws Exception {
+        for (int i=0; i<9; i++) {
+            g.add(0);
+            g.add(0);
+        }
+        g.add(2);
+        g.add(8);
+        g.add(10);
+        assertEquals(20, g.score());
 
     }
 }
