@@ -42,6 +42,9 @@ public class TestGame {
 
     @Test
     public void testSimpleSpare() throws Exception {
-
+        g.add(3);
+        g.add(7);
+        g.add(3);
+        assertEquals(13, g.scoreForFrame(1));
     }
 }
