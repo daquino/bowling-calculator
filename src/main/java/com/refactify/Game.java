@@ -4,7 +4,7 @@ public class Game {
     private int itsScore = 0;
     private int[] itsThrows = new int[21];
     private int itsCurrentThrow = 0;
-    private int itsCurrentFrame = 0;
+    private int itsCurrentFrame = 1;
     private boolean firstThrow = true;
     public void add(final int pins) {
         itsThrows[itsCurrentThrow++] = pins;
@@ -15,10 +15,10 @@ public class Game {
     private void adjustCurrentFrame() {
         if (firstThrow == true) {
             firstThrow = false;
-            itsCurrentFrame++;
         }
         else {
             firstThrow = true;
+            itsCurrentFrame++;
         }
     }
 
