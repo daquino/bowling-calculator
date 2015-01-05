@@ -5,7 +5,6 @@ public class Frame {
         return 0;
     }
 
-    public void add(final Throw throw) {
-
+    public void add(final int pins) {
     }
 }
