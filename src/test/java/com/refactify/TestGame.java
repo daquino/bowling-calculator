@@ -14,14 +14,6 @@ public class TestGame {
     }
 
     @Test
-    public void testOneThrow() throws Exception {
-        g = new Game();
-        g.add(5);
-        assertEquals(5, g.score());
-        assertEquals(1, g.getCurrentFrame());
-    }
-
-    @Test
     public void testTwoThrowsNoMark() throws Exception {
         g = new Game();
         g.add(5);
