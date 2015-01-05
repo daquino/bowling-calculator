@@ -21,10 +21,14 @@ public class Game {
             int secondThrow = itsThrows[ball++];
             int frameScore = firstThrow + secondThrow;
             if(frameScore == 10)
-                score += frameScore + itsThrows[ball++];
+                score += frameScore + itsThrows[ball];
             else
                 score += frameScore;
         }
         return score;
+    }
+
+    public int getCurrentFrame() {
+        return 1 + (itsCurrentThrow-1)/2;
     }
 }
